@@ -2,10 +2,6 @@
 % set
 % Edited by Huahui Chen, 2017.3.16
 
-
-
-
-%% 
 % change your data directory
 filedir = 'your data diretory'; 
 filename = dir([filedir '/*.skeleton']);
@@ -23,7 +19,6 @@ mkdir([cross_subject '/test'])
 mkdir(cross_view)
 mkdir([cross_view '/train'])
 mkdir([cross_view '/test'])
-
 
 
 % Divide for cross subject
