@@ -1,0 +1,49 @@
+% This file is for dividing S_C_P_R_A.skeleton into training set and test
+% set
+% Edited by Huahui Chen, 2017.3.16
+
+% change your data directory
+filedir = 'your data diretory'; 
+filename = dir([filedir '/*.skeleton']);
+
+% change your save data dircectory
+savedir = '/home/chh/icme/dataset_skeleton'
+
+cross_subject = [savedir '/' 'cross_subject'];
+cross_view = [savedir '/' 'cross_view'];
+
+mkdir(cross_subject)
+mkdir([cross_subject '/train'])
+mkdir([cross_subject '/test'])
+
+mkdir(cross_view)
+mkdir([cross_view '/train'])
+mkdir([cross_view '/test'])
+
+
+% Divide for cross subject
+select_subject = [1, 2, 4, 5, 8, 9, 13, 14, 15, 16, 17, 18, 19, 25, 27, 28, 31, 34, 35, 38];
+for i = 1 : length(filename)
+    tempname = filename(i).name;
+    s = str2num(tempname(10:12));
+    if ismember(s, select_subject)
+        copyfile([filedir '/' tempname], [cross_subject '/train/' tempname])
+    else 
+        copyfile([filedir '/' tempname], [cross_subject '/test/' tempname])
+    end
+end
+
+
+% Divide for cross view
+select_subject = [2, 3];
+for i = 1 : length(filename)
+    tempname = filename(i).name;
+    s = str2num(tempname(6:8));
+    if ismember(s, select_subject)
+        copyfile([filedir '/' tempname], [cross_view '/train/' tempname])
+    else 
+        copyfile([filedir '/' tempname], [cross_view '/test/' tempname])
+    end
+end
+
+
