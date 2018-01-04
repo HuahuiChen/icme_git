@@ -14,7 +14,24 @@ filename = dir([filedir '/*.skeleton']);
 savedir = '/home/chh/icme/dataset_skeleton'
 
 cross_subject = [savedir '/' 'cross_subject'];
-cross_view = [savedir '/' 'cross_view'];
+cross_view = [savedir '/' 'cross_view'];l
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 mkdir(cross_subject)
 mkdir([cross_subject '/train'])

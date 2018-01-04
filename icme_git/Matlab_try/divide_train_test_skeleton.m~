@@ -2,6 +2,10 @@
 % set
 % Edited by Huahui Chen, 2017.3.16
 
+
+
+
+%% 
 % change your data directory
 filedir = 'your data diretory'; 
 filename = dir([filedir '/*.skeleton']);
@@ -10,7 +14,26 @@ filename = dir([filedir '/*.skeleton']);
 savedir = '/home/chh/icme/dataset_skeleton'
 
 cross_subject = [savedir '/' 'cross_subject'];
-cross_view = [savedir '/' 'cross_view'];
+cross_view = [savedir '/' 'cross_view'];l
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 mkdir(cross_subject)
 mkdir([cross_subject '/train'])
@@ -19,6 +42,7 @@ mkdir([cross_subject '/test'])
 mkdir(cross_view)
 mkdir([cross_view '/train'])
 mkdir([cross_view '/test'])
+
 
 
 % Divide for cross subject
