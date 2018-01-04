@@ -1,0 +1,21 @@
+
+close all
+clc
+clear
+addpath('G:\skeleton\detection\detection utl1');
+
+dir_name = 'G:\skeleton\detection\PKU_Skeleton_Renew\';
+
+obj_name = 'G:\skeleton\detection\map data\train_cv\';
+list_train_cv = importdata('G:\skeleton\detection\STRUCT_ICMEW\train-cross-view.txt');
+
+for i = 1 : length(list_train_cv)
+    i
+    name = list_train_cv{i};
+    name=[name,'.txt'];
+    filename = [dir_name,name];
+    img = create_map(filename);
+    name=name(1:6);
+    d=[obj_name,name];
+    imwrite(img,d,'png');    
+end

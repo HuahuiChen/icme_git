@@ -1,0 +1,1 @@
+train_crossview = fopen('G:\skeleton\detection\PKU_Skeleton_Renew\','w');

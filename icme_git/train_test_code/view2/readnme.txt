@@ -1,0 +1,5 @@
+1. For training and testing
+   ./create_imagenet.sh to produce skeleton_train_lmdb and skeleton_test_lmdb.
+   ./finetune.sh
+2. For final testing to obtain scores
+   ./obtain_score.sh
